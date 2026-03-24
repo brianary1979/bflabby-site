@@ -12,10 +12,6 @@
     body {
       min-height: 100vh;
       background: #050510;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       font-family: 'Share Tech Mono', monospace;
       padding: 2rem;
       padding-bottom: 3rem;
@@ -60,8 +56,9 @@
     .container {
       position: relative;
       z-index: 2;
-      max-width: 720px;
+      max-width: 960px;
       width: 100%;
+      margin: 0 auto;
     }
 
     .back-btn {
@@ -104,7 +101,7 @@
       font-weight: 900;
       font-size: clamp(1.8rem, 6vw, 3.5rem);
       line-height: 1.1;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       background: linear-gradient(90deg, #00ffb4, #00aaff, #00ffb4);
       background-size: 200% auto;
       -webkit-background-clip: text;
@@ -117,31 +114,114 @@
       100% { background-position: 200% center; }
     }
 
-    .panel {
-      border: 1px solid rgba(0, 255, 180, 0.3);
-      background: rgba(0, 255, 180, 0.03);
-      padding: 2rem;
-      margin-bottom: 1.5rem;
-      position: relative;
-    }
-
-    .panel::before {
-      content: attr(data-label);
-      position: absolute;
-      top: -0.6rem;
-      left: 1.5rem;
-      background: #050510;
-      padding: 0 0.5rem;
-      font-size: 0.65rem;
+    .subtitle {
+      color: rgba(0, 255, 180, 0.5);
+      font-size: 0.75rem;
       letter-spacing: 0.2em;
-      color: #00ffb4;
       text-transform: uppercase;
+      margin-bottom: 3rem;
     }
 
-    .panel p {
+    /* Product grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+
+    .product-card {
+      border: 1px solid rgba(0, 255, 180, 0.2);
+      background: rgba(0, 255, 180, 0.03);
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .product-card:hover {
+      border-color: rgba(0, 255, 180, 0.5);
+      box-shadow: 0 0 16px rgba(0, 255, 180, 0.1);
+    }
+
+    .product-image {
+      width: 100%;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(0, 255, 180, 0.1);
+      overflow: hidden;
+      padding: 1rem;
+    }
+
+    .product-image img {
+      max-width: 100%;
+      max-height: 220px;
+      object-fit: contain;
+      filter: brightness(0.95);
+    }
+
+    .product-body {
+      padding: 1.25rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .product-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.7rem;
+      color: #00ffb4;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+    }
+
+    .product-testimonial {
+      font-size: 0.85rem;
       color: #a0ffd8;
-      font-size: 1rem;
-      line-height: 1.8;
+      line-height: 1.7;
+      flex: 1;
+      border-left: 2px solid rgba(0, 255, 180, 0.3);
+      padding-left: 0.75rem;
+      font-style: italic;
+    }
+
+    .product-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: rgba(0, 255, 180, 0.4);
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    .buy-btn {
+      display: block;
+      text-align: center;
+      border: 1px solid #00ffb4;
+      color: #00ffb4;
+      text-decoration: none;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.6rem;
+      margin-top: 0.5rem;
+      background: rgba(0, 255, 180, 0.05);
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+
+    .buy-btn:hover {
+      background: rgba(0, 255, 180, 0.12);
+      box-shadow: 0 0 12px rgba(0, 255, 180, 0.2);
+    }
+
+    .disclaimer {
+      font-size: 0.65rem;
+      color: #003322;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
     }
 
     .footer {
@@ -149,7 +229,6 @@
       color: #004433;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      margin-top: 2rem;
     }
 
     ::-webkit-scrollbar { width: 6px; }
@@ -160,20 +239,38 @@
 <body>
   <div class="container">
 
-    <a href="index.html" class="back-btn">&larr; Back</a>
+    <div style="margin-bottom: 2rem;">
+      <a href="index.html" class="back-btn">&larr; Back</a>
+    </div>
 
     <div class="badge">Recommended Gear &mdash; bflabby.org</div>
 
     <h1>STUFF I ACTUALLY USE</h1>
+    <p class="subtitle">Field tested &mdash; 40+ years of data &mdash; no regrets</p>
 
-    <div class="panel" data-label="Coming Soon">
-      <p>
-        Product recommendations are being assembled.<br />
-        Check back soon — only gear that has been field tested,<br />
-        approved by someone in their 40s, and deemed worth the money.
-      </p>
+    <div class="product-grid">
+
+      <!-- PRODUCT CARD -->
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0FPXCFZ1K?th=1&linkCode=ll2&tag=19790d0-20&linkId=766cf336e3a3c04c8deff9b6e53a3446&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0FPXCFZ1K&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=19790d0-20" alt="Showvigor Fogless Shower Mirror with LED Lights" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Showvigor Fogless Shower Mirror with LED Lights</div>
+          <div>
+            <div class="product-label">My Take</div>
+            <p class="product-testimonial">Personal testimonial placeholder — tell your visitors why you recommend this product and how you use it in your daily life.</p>
+          </div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0FPXCFZ1K?th=1&linkCode=ll2&tag=19790d0-20&linkId=766cf336e3a3c04c8deff9b6e53a3446&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+      <!-- END PRODUCT CARD -->
+
     </div>
 
+    <p class="disclaimer">As an Amazon Associate I earn from qualifying purchases.</p>
     <p class="footer">bflabby.org &mdash; est. 1979 &mdash; all rights reserved, not that anyone wants them</p>
 
   </div>
