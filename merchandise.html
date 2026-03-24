@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bflabby.org</title>
+  <title>Recommended Gear &mdash; bflabby.org</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
 
@@ -18,13 +18,12 @@
       justify-content: center;
       font-family: 'Share Tech Mono', monospace;
       padding: 2rem;
+      padding-bottom: 3rem;
       text-align: center;
       overflow-x: hidden;
       position: relative;
-      padding-bottom: 3rem;
     }
 
-    /* Animated grid background */
     body::before {
       content: '';
       position: fixed;
@@ -35,6 +34,7 @@
       background-size: 40px 40px;
       animation: gridScroll 20s linear infinite;
       z-index: 0;
+      pointer-events: none;
     }
 
     @keyframes gridScroll {
@@ -42,7 +42,6 @@
       100% { transform: translateY(40px); }
     }
 
-    /* Scanlines */
     body::after {
       content: '';
       position: fixed;
@@ -65,6 +64,24 @@
       width: 100%;
     }
 
+    .back-btn {
+      display: inline-block;
+      border: 1px solid rgba(0, 255, 180, 0.4);
+      color: rgba(0, 255, 180, 0.6);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.4rem 1rem;
+      margin-bottom: 2rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .back-btn:hover {
+      border-color: #00ffb4;
+      color: #00ffb4;
+    }
+
     .badge {
       display: inline-block;
       border: 1px solid #00ffb4;
@@ -85,7 +102,7 @@
     h1 {
       font-family: 'Orbitron', sans-serif;
       font-weight: 900;
-      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-size: clamp(1.8rem, 6vw, 3.5rem);
       line-height: 1.1;
       margin-bottom: 1rem;
       background: linear-gradient(90deg, #00ffb4, #00aaff, #00ffb4);
@@ -98,15 +115,6 @@
     @keyframes shimmer {
       0% { background-position: 0% center; }
       100% { background-position: 200% center; }
-    }
-
-    .tagline {
-      font-size: 1.1rem;
-      color: #00ffb4;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 3rem;
-      opacity: 0.8;
     }
 
     .panel {
@@ -136,35 +144,6 @@
       line-height: 1.8;
     }
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: rgba(0, 255, 180, 0.2);
-      border: 1px solid rgba(0, 255, 180, 0.2);
-      margin-bottom: 1.5rem;
-    }
-
-    .stat {
-      background: #050510;
-      padding: 1.2rem 0.5rem;
-    }
-
-    .stat .value {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.6rem;
-      color: #00ffb4;
-      display: block;
-      margin-bottom: 0.3rem;
-    }
-
-    .stat .label {
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      color: #006644;
-      text-transform: uppercase;
-    }
-
     .footer {
       font-size: 0.7rem;
       color: #004433;
@@ -173,70 +152,25 @@
       margin-top: 2rem;
     }
 
-    .merch-btn {
-      display: inline-block;
-      border: 1px solid #00ffb4;
-      color: #00ffb4;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 0.75rem 2rem;
-      margin-bottom: 1.5rem;
-      background: rgba(0, 255, 180, 0.05);
-      transition: background 0.2s, box-shadow 0.2s;
-    }
-
-    .merch-btn:hover {
-      background: rgba(0, 255, 180, 0.12);
-      box-shadow: 0 0 16px rgba(0, 255, 180, 0.3);
-    }
-
-    .cursor {
-      display: inline-block;
-      width: 10px;
-      height: 1.1em;
-      background: #00ffb4;
-      vertical-align: text-bottom;
-      animation: blink 1s step-end infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #050510; }
+    ::-webkit-scrollbar-thumb { background: rgba(0, 255, 180, 0.3); }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <div class="badge">System Online &mdash; bflabby.org</div>
+    <a href="index.html" class="back-btn">&larr; Back</a>
 
-    <h1>IT'S OK TO BE OLD AND FLABBY</h1>
+    <div class="badge">Recommended Gear &mdash; bflabby.org</div>
 
-    <div class="stats">
-      <div class="stat">
-        <span class="value">0</span>
-        <span class="label">Regrets</span>
-      </div>
-      <div class="stat">
-        <span class="value">40+</span>
-        <span class="label">Years of Data</span>
-      </div>
-      <div class="stat">
-        <span class="value">∞</span>
-        <span class="label">Snacks Consumed</span>
-      </div>
-    </div>
+    <h1>STUFF I ACTUALLY USE</h1>
 
-    <a href="merchandise.html" class="merch-btn">Recommended Gear</a>
-
-    <div class="panel" data-label="Notice">
+    <div class="panel" data-label="Coming Soon">
       <p>
-        If a friend sent you here looking for something useful —
-        there is nothing useful here.<br />
-        Go watch something on Jellyfin. <span class="cursor"></span>
+        Product recommendations are being assembled.<br />
+        Check back soon — only gear that has been field tested,<br />
+        approved by someone in their 40s, and deemed worth the money.
       </p>
     </div>
 
