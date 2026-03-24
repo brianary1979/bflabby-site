@@ -56,7 +56,7 @@
     .container {
       position: relative;
       z-index: 2;
-      max-width: 960px;
+      max-width: 1100px;
       width: 100%;
       margin: 0 auto;
     }
@@ -74,10 +74,7 @@
       transition: border-color 0.2s, color 0.2s;
     }
 
-    .back-btn:hover {
-      border-color: #00ffb4;
-      color: #00ffb4;
-    }
+    .back-btn:hover { border-color: #00ffb4; color: #00ffb4; }
 
     .badge {
       display: inline-block;
@@ -122,13 +119,12 @@
       margin-bottom: 3rem;
     }
 
-    /* Product grid */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 1.5rem;
       text-align: left;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     .product-card {
@@ -160,7 +156,6 @@
       max-width: 100%;
       max-height: 220px;
       object-fit: contain;
-      filter: brightness(0.95);
     }
 
     .product-body {
@@ -179,6 +174,14 @@
       line-height: 1.4;
     }
 
+    .product-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: rgba(0, 255, 180, 0.4);
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
     .product-testimonial {
       font-size: 0.85rem;
       color: #a0ffd8;
@@ -187,14 +190,6 @@
       border-left: 2px solid rgba(0, 255, 180, 0.3);
       padding-left: 0.75rem;
       font-style: italic;
-    }
-
-    .product-label {
-      font-size: 0.6rem;
-      letter-spacing: 0.15em;
-      color: rgba(0, 255, 180, 0.4);
-      text-transform: uppercase;
-      margin-bottom: 0.25rem;
     }
 
     .product-price {
@@ -215,7 +210,6 @@
       letter-spacing: 0.2em;
       text-transform: uppercase;
       padding: 0.6rem;
-      margin-top: 0.5rem;
       background: rgba(0, 255, 180, 0.05);
       transition: background 0.2s, box-shadow 0.2s;
     }
@@ -252,13 +246,11 @@
     </div>
 
     <div class="badge">Recommended Gear &mdash; bflabby.org</div>
-
     <h1>STUFF I ACTUALLY USE</h1>
     <p class="subtitle">Field tested &mdash; 40+ years of data &mdash; no regrets</p>
 
     <div class="product-grid">
 
-      <!-- PRODUCT CARD -->
       <div class="product-card">
         <div class="product-image">
           <a href="https://www.amazon.com/dp/B0FPXCFZ1K?th=1&linkCode=ll2&tag=19790d0-20&linkId=766cf336e3a3c04c8deff9b6e53a3446&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
@@ -267,15 +259,387 @@
         </div>
         <div class="product-body">
           <div class="product-name">Showvigor Fogless Shower Mirror with LED Lights</div>
-          <div>
-            <div class="product-label">My Take</div>
-            <p class="product-testimonial">I purchased this March 23rd. I'll update after I've used it for awhile but first impression is great.</p>
-          </div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">I purchased this March 23rd. I'll update after I've used it for awhile but first impression is great.</p></div>
           <div class="product-price">~$25.99</div>
           <a class="buy-btn" href="https://www.amazon.com/dp/B0FPXCFZ1K?th=1&linkCode=ll2&tag=19790d0-20&linkId=766cf336e3a3c04c8deff9b6e53a3446&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
         </div>
       </div>
-      <!-- END PRODUCT CARD -->
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0FGD54HRY?th=1&linkCode=ll2&tag=19790d0-20&linkId=e6a8b126ced645cbfdf5e661bc0e6abd&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/41Nr3Im2dZL.jpg" alt="Spray Mop with Washable Pads" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Spray Mop with Washable Microfiber Pads</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">Really simple little mop and the spray thing works great. Cheaper alternative to swiffer BS.</p></div>
+          <div class="product-price">~$17.98</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0FGD54HRY?th=1&linkCode=ll2&tag=19790d0-20&linkId=e6a8b126ced645cbfdf5e661bc0e6abd&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0F67GLGNL?th=1&linkCode=ll2&tag=19790d0-20&linkId=ea493aeecd39bb7eb458864b2fc5e698&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/51-Pci1jA0L.jpg" alt="BELRIGO Electric Salt & Pepper Grinder Set" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">BELRIGO Electric Salt &amp; Pepper Grinder Set</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">Delightfully hardcore grinders. Take tons of batteries so be aware of that.</p></div>
+          <div class="product-price">~$12.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0F67GLGNL?th=1&linkCode=ll2&tag=19790d0-20&linkId=ea493aeecd39bb7eb458864b2fc5e698&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B095YJW56C?th=1&linkCode=ll2&tag=19790d0-20&linkId=1cb8278dcf24553426dd05437e9a04c9&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/41SN6szQSDL.jpg" alt="Etekcity Smart Body Weight Scale" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Etekcity Smart Body Weight Scale</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">Subscription free weight tracking that links to Google Fit or FitBit or whatever.</p></div>
+          <div class="product-price">~$19.97</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B095YJW56C?th=1&linkCode=ll2&tag=19790d0-20&linkId=1cb8278dcf24553426dd05437e9a04c9&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0FW4P7L9H?&linkCode=ll2&tag=19790d0-20&linkId=cd150d3b5ed944121109afe75e9d913d&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/41h1AdOkQBL.jpg" alt="USB KVM Switch — 2 Computers, 1 Set of Peripherals" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">USB KVM Switch — 2 Computers, 1 Set of Peripherals</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">Need to switch your keyboard &amp; mouse between your work computer and home computer? This is the best one I've found.</p></div>
+          <div class="product-price">~$9.98</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0FW4P7L9H?&linkCode=ll2&tag=19790d0-20&linkId=cd150d3b5ed944121109afe75e9d913d&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B081415GCS?th=1&linkCode=ll2&tag=19790d0-20&linkId=6b88752a6416071b48dd1062929a2549&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/41KTfLEChqL.jpg" alt="Logitech G733 Lightspeed Wireless Gaming Headset" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Logitech G733 Lightspeed Wireless Gaming Headset</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">Love me some Logi products and this is no exception. Best midrange headset I've ever used.</p></div>
+          <div class="product-price">~$118.00</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B081415GCS?th=1&linkCode=ll2&tag=19790d0-20&linkId=6b88752a6416071b48dd1062929a2549&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0DSW7R4VN?&linkCode=ll2&tag=19790d0-20&linkId=23bc73b3412282e812df0f50a693f5dd&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/41uiaeC4acL.jpg" alt="WOLFBOX Electric Air Duster" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">WOLFBOX Electric Air Duster</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">Stop buying compressed air. Buy this instead.</p></div>
+          <div class="product-price">~$39.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0DSW7R4VN?&linkCode=ll2&tag=19790d0-20&linkId=23bc73b3412282e812df0f50a693f5dd&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0F3J9BW8W?th=1&linkCode=ll2&tag=19790d0-20&linkId=0e66186fa36e3e7d36f7ff3a543c76bf&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/51y9VHUHN-L.jpg" alt="MRGLAS 360° Magnetic Phone Holder Mount" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">MRGLAS 360&deg; Magnetic Phone Holder Mount</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">This mounts my phone next to my keyboard at my workdesk. Its very solid.</p></div>
+          <div class="product-price">~$21.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0F3J9BW8W?th=1&linkCode=ll2&tag=19790d0-20&linkId=0e66186fa36e3e7d36f7ff3a543c76bf&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0D2DRS9KY?&linkCode=ll2&tag=19790d0-20&linkId=6098399be02e74d1aee2b97c57654259&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/41v3og8cudL.jpg" alt="Winsea USB Rechargeable Ear & Nose Hair Trimmer" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Winsea USB Rechargeable Ear &amp; Nose Hair Trimmer</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">I love rechargeables and this thing is great. Be sure to also get some electric razor oil to keep it sharp and lubed.</p></div>
+          <div class="product-price">~$6.98</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0D2DRS9KY?&linkCode=ll2&tag=19790d0-20&linkId=6098399be02e74d1aee2b97c57654259&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0C1B3YHTG?&linkCode=ll2&tag=19790d0-20&linkId=6b067ac3bd5756966a4fd6532f2468ae&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/5166LdJa7zL.jpg" alt="REHOYO Cordless Beard Trimmer" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">REHOYO Cordless Beard Trimmer</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">After years with a tiny blue norelco I switched to this and its so much better. Don't forget your razor oil.</p></div>
+          <div class="product-price">~$35.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0C1B3YHTG?&linkCode=ll2&tag=19790d0-20&linkId=6b067ac3bd5756966a4fd6532f2468ae&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0DC6TBVB3?&linkCode=ll2&tag=19790d0-20&linkId=6d7977b443272495c7514871c0a1331c&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/41iEQ1+DPdL.jpg" alt="MAWEIFOU Silent Office Chair Caster Wheels 5-Pack" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">MAWEIFOU Silent Office Chair Caster Wheels (5-Pack)</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">Wheels on your office chair suck? Replace with these. Very affordable &amp; super awesome.</p></div>
+          <div class="product-price">~$12.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0DC6TBVB3?&linkCode=ll2&tag=19790d0-20&linkId=6d7977b443272495c7514871c0a1331c&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B07W95GV64?th=1&linkCode=ll2&tag=19790d0-20&linkId=ee047c74f894468c077efc8b87604abc&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/51vdR9qKCZL.jpg" alt="Double Donut Caramel Macchiato K-Cups 24-Count" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Double Donut Caramel Macchiato K-Cups (24-Count)</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">This is my every-morning-coffee. Felt weird not putting it on here.</p></div>
+          <div class="product-price">~$13.55</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B07W95GV64?th=1&linkCode=ll2&tag=19790d0-20&linkId=ee047c74f894468c077efc8b87604abc&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0D1NQNV9G?th=1&linkCode=ll2&tag=19790d0-20&linkId=dbd9473ad96ea6ea84bfd9e054de6c19&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/319qNqb+yjL.jpg" alt="Umpqua Rivergrip Scissor Forceps" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Umpqua Rivergrip Scissor Forceps</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">Unlike other amazon garbage these actually work.</p></div>
+          <div class="product-price">~$23.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0D1NQNV9G?th=1&linkCode=ll2&tag=19790d0-20&linkId=dbd9473ad96ea6ea84bfd9e054de6c19&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0C2GT2GDN?th=1&linkCode=ll2&tag=19790d0-20&linkId=89aced555a8ed2b8f3f79f841e458dba&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/51xyDXnhsPL.jpg" alt="Portable Camping Fan with LED Lantern 20000mAh" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Portable Camping Fan with LED Lantern — 20,000mAh</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">I bought this with camping in mind but its also great to have around for power outages.</p></div>
+          <div class="product-price">~$29.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0C2GT2GDN?th=1&linkCode=ll2&tag=19790d0-20&linkId=89aced555a8ed2b8f3f79f841e458dba&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B09LD7WRVS?th=1&linkCode=ll2&tag=19790d0-20&linkId=f53c967f4686b9648619ba782391d714&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/41thvWfCzoL.jpg" alt="Philips Sonicare 4100 Electric Toothbrush" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Philips Sonicare 4100 Electric Toothbrush</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">Everyone should have one of these. Standard universal electric toothbrush.</p></div>
+          <div class="product-price">~$39.96</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B09LD7WRVS?th=1&linkCode=ll2&tag=19790d0-20&linkId=f53c967f4686b9648619ba782391d714&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0B6FSQH8F?&linkCode=ll2&tag=19790d0-20&linkId=fe19c3fd05fba75db8d7b05b3845acc9&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/31IC7BruymL.jpg" alt="Miebul Motion Sensor Rechargeable Night Light" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Miebul Motion Sensor Rechargeable Night Light</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">To make you feel like an adventurer carrying a torch. Great nightlight but also useful in the event of a power outage.</p></div>
+          <div class="product-price">~$18.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0B6FSQH8F?&linkCode=ll2&tag=19790d0-20&linkId=fe19c3fd05fba75db8d7b05b3845acc9&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B08Y1HFFFB?th=1&linkCode=ll2&tag=19790d0-20&linkId=5f9ed40e4785325cc123957c601e7d26&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/410NkkAE90S.jpg" alt="Puomue Microfiber Glass & Screen Cleaning Cloths 6-Pack" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Puomue Microfiber Screen Cleaning Cloths (6-Pack)</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">Pretty self explanatory but I feel like more people should have these around considering how many screens we look at.</p></div>
+          <div class="product-price">~$9.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B08Y1HFFFB?th=1&linkCode=ll2&tag=19790d0-20&linkId=5f9ed40e4785325cc123957c601e7d26&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B07GBZ4Q68?th=1&linkCode=ll2&tag=19790d0-20&linkId=6e24d147ecbd2501c107c2be89e21c0c&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/4189N8RLVYL.jpg" alt="Logitech G502 Hero Gaming Mouse" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Logitech G502 Hero Gaming Mouse</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">Best mouse ever.</p></div>
+          <div class="product-price">~$35.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B07GBZ4Q68?th=1&linkCode=ll2&tag=19790d0-20&linkId=6e24d147ecbd2501c107c2be89e21c0c&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0CKV7B49Z?th=1&linkCode=ll2&tag=19790d0-20&linkId=f78f8cb4787bd533465d22740b11c229&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/51K+twJSttL.jpg" alt="Cottonelle Ultra Comfort Toilet Paper 9 Mega Rolls" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Cottonelle Ultra Comfort Toilet Paper (9 Mega Rolls)</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">You should be using this toilet paper.</p></div>
+          <div class="product-price">~$10.49</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0CKV7B49Z?th=1&linkCode=ll2&tag=19790d0-20&linkId=f78f8cb4787bd533465d22740b11c229&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0BTYCRJSS?th=1&linkCode=ll2&tag=19790d0-20&linkId=9f48acb0f2f3fcec68475be3db29c465&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/31OqZzNn4fL.jpg" alt="Soundcore P20i True Wireless Earbuds" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Soundcore P20i True Wireless Earbuds</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">I can't even remember the last time I plugged these in to charge them. Not daily drivers for me but extremely comfortable and great sound.</p></div>
+          <div class="product-price">~$19.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0BTYCRJSS?th=1&linkCode=ll2&tag=19790d0-20&linkId=9f48acb0f2f3fcec68475be3db29c465&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B07YC12FW1?th=1&linkCode=ll2&tag=19790d0-20&linkId=cd067ffdec9e26436eb9f14348830e1c&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/41yWoqBZIyL.jpg" alt="Portable 12V Tire Inflator" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Portable 12V Tire Inflator</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">Put this in your trunk. Cheap and easy.</p></div>
+          <div class="product-price">~$21.26</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B07YC12FW1?th=1&linkCode=ll2&tag=19790d0-20&linkId=cd067ffdec9e26436eb9f14348830e1c&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B07GN6CGDF?th=1&linkCode=ll2&tag=19790d0-20&linkId=e8dfd11f8519e762747913847a7cb14f&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/31bBgQcp4IL.jpg" alt="USB Flash Drive" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">USB Flash Drive</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">Should be your standard for thumbdrives. I use these for my photo digitization business.</p></div>
+          <div class="product-price">~$9.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B07GN6CGDF?th=1&linkCode=ll2&tag=19790d0-20&linkId=e8dfd11f8519e762747913847a7cb14f&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0BHCLZGTW?th=1&linkCode=ll2&tag=19790d0-20&linkId=8bb4b06c08e40eb4cc9be117bd9f8400&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/31u+3NqT2rL.jpg" alt="Soundcore Space Q45 ANC Headphones" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Soundcore Space Q45 ANC Headphones</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">Back when I still used bluetooth headphones these were my daily driver. Incredible sound for the price.</p></div>
+          <div class="product-price">~$79.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0BHCLZGTW?th=1&linkCode=ll2&tag=19790d0-20&linkId=8bb4b06c08e40eb4cc9be117bd9f8400&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0822ZLZ1D?&linkCode=ll2&tag=19790d0-20&linkId=b375389de5a76a270990c72071aa63b3&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/414psdn7-eL.jpg" alt="32oz Deli Food Storage Containers 24-Pack" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">32oz Deli Food Storage Containers (24-Pack)</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">I know this seems crazy but you should use these instead of rubbermaid BS.</p></div>
+          <div class="product-price">~$22.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0822ZLZ1D?&linkCode=ll2&tag=19790d0-20&linkId=b375389de5a76a270990c72071aa63b3&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B09TMJ9LGR?th=1&linkCode=ll2&tag=19790d0-20&linkId=df6639d3750802003dd4c5152c50d703&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/41vd9JOgIQL.jpg" alt="Samsung 32-inch Odyssey G55A QHD 165Hz Gaming Monitor" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Samsung 32&quot; Odyssey G55A QHD 165Hz Gaming Monitor</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">My main monitor since 2023. 32" QHD, 165hz. Freesync.</p></div>
+          <div class="product-price">~$199.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B09TMJ9LGR?th=1&linkCode=ll2&tag=19790d0-20&linkId=df6639d3750802003dd4c5152c50d703&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="https://www.amazon.com/dp/B0BZ7JM6V3?th=1&linkCode=ll2&tag=19790d0-20&linkId=cdc9e3dca89b3633b402a53b5ef43976&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">
+            <img src="https://m.media-amazon.com/images/I/414RAc5M6KL.jpg" alt="Claiks 63-inch Electric Standing Desk" />
+          </a>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Claiks 63&quot; Electric Standing Desk</div>
+          <div><div class="product-label">My Take</div>
+          <p class="product-testimonial">My main computer desk. Note that its 63 inches wide. Plenty of room for 3 monitors.</p></div>
+          <div class="product-price">~$249.99</div>
+          <a class="buy-btn" href="https://www.amazon.com/dp/B0BZ7JM6V3?th=1&linkCode=ll2&tag=19790d0-20&linkId=cdc9e3dca89b3633b402a53b5ef43976&language=en_US&ref_=as_li_ss_tl" target="_blank" rel="noopener">View on Amazon &rarr;</a>
+        </div>
+      </div>
 
     </div>
 
