@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Projects | bflabby.org</title>
+  <meta name="description" content="Things Brian has built — personal projects, experiments, and whatever this is." />
+  <meta name="author" content="Brian" />
+  <link rel="canonical" href="https://bflabby.org/projects.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bflabby.org/projects.html" />
+  <meta property="og:title" content="My Projects | bflabby.org" />
+  <meta property="og:description" content="Things Brian has built — personal projects, experiments, and whatever this is." />
+  <meta property="og:image" content="https://bflabby.org/og-image.jpg" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #050510;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Share Tech Mono', monospace;
+      padding: 2rem;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+      padding-bottom: 3rem;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 255, 180, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 180, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: gridScroll 20s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes gridScroll {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(40px); }
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.15) 2px,
+        rgba(0,0,0,0.15) 4px
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      width: 100%;
+    }
+
+    .back-btn {
+      display: inline-block;
+      color: #006644;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: color 0.2s;
+    }
+
+    .back-btn:hover { color: #00ffb4; }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.8rem, 6vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(90deg, #00ffb4, #00aaff, #00ffb4);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 4s linear infinite;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .tagline {
+      font-size: 0.85rem;
+      color: #00ffb4;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      opacity: 0.6;
+    }
+
+    .project-card {
+      border: 1px solid rgba(0, 255, 180, 0.3);
+      background: rgba(0, 255, 180, 0.03);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      text-align: left;
+      text-decoration: none;
+      display: block;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+
+    .project-card:hover {
+      background: rgba(0, 255, 180, 0.07);
+      box-shadow: 0 0 20px rgba(0, 255, 180, 0.1);
+    }
+
+    .project-card::before {
+      content: attr(data-label);
+      position: absolute;
+      top: -0.6rem;
+      left: 1.5rem;
+      background: #050510;
+      padding: 0 0.5rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      color: #00ffb4;
+      text-transform: uppercase;
+    }
+
+    .project-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      color: #00ffb4;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-url {
+      font-size: 0.7rem;
+      color: #006644;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.85rem;
+    }
+
+    .project-desc {
+      color: #a0ffd8;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .project-stack {
+      margin-top: 0.85rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      color: #004433;
+      text-transform: uppercase;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 1.75rem;
+      right: 1.5rem;
+      color: #006644;
+      font-size: 1.2rem;
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .project-card:hover .arrow {
+      color: #00ffb4;
+      transform: translateX(4px);
+    }
+
+    .footer {
+      font-size: 0.7rem;
+      color: #004433;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <a href="/" class="back-btn">← bflabby.org</a>
+
+    <h1>MY PROJECTS</h1>
+    <div class="tagline">Things I built for no good reason</div>
+
+    <a href="https://typo.bflabby.org" target="_blank" rel="noopener" class="project-card" data-label="Project 001">
+      <span class="arrow">→</span>
+      <div class="project-title">Typo</div>
+      <div class="project-url">typo.bflabby.org</div>
+      <div class="project-desc">
+        A generative ambient music instrument that plays itself. Open it, start typing, or just let it run —
+        the music evolves on its own. Your keystrokes nudge the harmony. Inspired by the Adult Swim Choir app.
+      </div>
+      <div class="project-stack">Stack: Vite · React · Tone.js</div>
+    </a>
+
+    <p class="footer">bflabby.org &mdash; est. 1979 &mdash; all rights reserved, not that anyone wants them</p>
+
+  </div>
+</body>
+</html>
